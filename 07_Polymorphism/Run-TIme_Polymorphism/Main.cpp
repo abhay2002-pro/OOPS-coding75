@@ -10,8 +10,8 @@ public:
 
 class Dog : public Animal {
 public:
-    void sound() override {
-        cout << "The dog barks." << endl;
+    void sound(string str) {
+        cout << "This sound i need to make " << str << endl;
     }
 };
 

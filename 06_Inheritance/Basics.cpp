@@ -1,25 +1,29 @@
 #include <iostream>
 using namespace std;
 
-// Base class
 class Animal {
-public:
+protected:
     void eat() {
         cout << "This animal eats food." << endl;
     }
 };
 
-// Derived class
 class Dog : public Animal {
 public:
     void bark() {
         cout << "The dog barks." << endl;
     }
+
+    void eat() {
+        Animal::eat();
+    }
 };
 
 int main() {
+    Animal animal;
     Dog dog;
-    dog.eat();  // Inherited method
-    dog.bark(); // Own method
+
+    dog.bark(); 
+    dog.eat();
     return 0;
 }

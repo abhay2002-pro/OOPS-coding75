@@ -18,6 +18,12 @@ class Cat extends Animal {
     }
 }
 
+class Lion extends Animal {
+    void sound() {
+        System.out.println("The lion roars.");
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
         Animal dog = new Dog();
